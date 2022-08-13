@@ -1,83 +1,180 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import InputField from './InputField';
 import PackageCalculation from './PackageCalculation';
 
 const SalesCalculation = () => {
-  // BM 12 kg state
-  const [bmTotal, setBmTotal] = useState(0);
-  const [bmQty, setBmQty] = useState(0);
-  const [bmPrice, setBmPrice] = useState(0);
-  // BM 20 kg state
-  const [bm20Total, setBm20Total] = useState(0);
-  const [bm20Qty, setBm20Qty] = useState(0);
-  const [bm20Price, setBm20Price] = useState(0);
-  // BS 12 kg state
-  const [bsTotal, setBsTotal] = useState(0);
-  const [bsQty, setBsQty] = useState(0);
-  const [bsPrice, setBsPrice] = useState(0);
-  // BS 30 kg state
-  const [bs30Total, setBs30Total] = useState(0);
-  const [bs30Qty, setBs30Qty] = useState(0);
-  const [bs30Price, setBs30Price] = useState(0);
-  // Total 12 kg state
-  const [to12Total, setTo12Total] = useState(0);
-  const [to12Qty, setTo12Qty] = useState(0);
-  const [to12Price, setTo12Price] = useState(0);
+  //refill price from database
+  const [refillPrice, setRefillPrice] = useState({});
+  const { bm12price, bm20price, bs12price, bs30price, to12price, to15price, to33price, nz12price } = refillPrice;
+  useEffect(() => {
+    // this api key from todo app server
+    const url = 'https://flannel-parliament-48417.herokuapp.com/price/refillPrice'
+    fetch(url)
+      .then(res => res.json())
+      .then(data => setRefillPrice(data))
+  }, [])
 
-  // Total 15 kg state
-  const [to15Total, setTo15Total] = useState(0);
-  const [to15Qty, setTo15Qty] = useState(0);
-  const [to15Price, setTo15Price] = useState(0);
-  // Nazir 12 kg state
-  const [nz12Total, setNz12Total] = useState(0);
-  const [nz12Qty, setNz12Qty] = useState(0);
-  const [nz12Price, setNz12Price] = useState(0);
-  // Total 33 kg state
-  const [to33Total, setTo33Total] = useState(0);
-  const [to33Qty, setTo33Qty] = useState(0);
-  const [to33Price, setTo33Price] = useState(0);
 
-  const grandTotal = (bmTotal + bm20Total + bsTotal + bs30Total + to12Total + to15Total + to33Total + nz12Total)
+  //store input refill price
+  const [refPrice, setRefPrice] = useState({})
+  // const { bm12price, bm20price, bs12price, bs30price, to12price, to15price, to33price, nz12price } = refPrice;
+  //store input refill qty
+  const [refQty, setRefQty] = useState({
+    bm12qty: "",
+    bm20qty: "",
+    bs12qty: "",
+    bs30qty: "",
+    to12qty: "",
+    to15qty: "",
+    to33qty: "",
+    nz12qty: "",
+  })
+  for (let [key, value] of Object.entries(refQty)) {
+    // console.log(`${key}: ${value}`);
+  }
+  const { bm12qty, bm20qty, bs12qty, bs30qty, to12qty, to15qty, to33qty, nz12qty } = refQty;
+
+  // const grandTotal = parseInt((bm12qty * bm12price) + (bm20qty + bm20price) + (bs12qty * bs12price) + (bs30qty * bs30price) + (to12qty * to12price) + (to15qty * to15price) + (to33qty * to33price) + (nz12qty * nz12price))
+
+  const grandTotal = (parseInt(bm12qty * bm12price) + parseInt(bm20qty * bm20price) + parseInt(bs12qty * bs12price) + parseInt(bs30qty * bs30price) + parseInt(to12qty * to12price) + parseInt(to15qty * to15price) + parseInt(to33qty * to33price) + parseInt(nz12qty * nz12price))
+
+  const handlePrice = (e) => {
+    e.preventDefault();
+    const { name, value } = e.target;
+    setRefillPrice((prev) => {
+      return { ...prev, [name]: parseInt(value) }
+    })
+    setRefPrice((prev) => {
+      return { ...prev, [name]: parseInt(value) }
+    })
+  }
+  const handleQty = (e) => {
+    e.preventDefault();
+    const { name, value } = e.target;
+    setRefQty((prev) => {
+      return { ...prev, [name]: parseInt(value) }
+    })
+  }
+  // console.log(refPrice);
+
 
   const [packageTotal, setPackageTotal] = useState();
-  const refillPackage = (grandTotal + packageTotal);
+  // const refillPackage = (grandTotal + packageTotal);
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    console.log(e.target.bm12.value);
+  const handleRefillPriceSubmit = e => {
+    // e.preventDefault();
+    const url = 'https://flannel-parliament-48417.herokuapp.com/price/refillPrice';
+    fetch(url, {
+      method: 'PUT',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(refPrice)
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+        if (data) {
+          alert('data not found')
+        }
+      })
   }
+
   return (
-    <div className='border bg-slate-100 m-12 p-4 flex items-center justify-around'>
-      <form onSubmit={handleSubmit}>
-        <p>{refillPackage}</p>
-        <p>{grandTotal}</p>
-        <div className='grid col-span-1 gap-2'>
+    <div className='border bg-slate-100 lg:m-12 lg:p-4 px-2 lg:flex items-center justify-around'>
+      <form onSubmit={handleRefillPriceSubmit}>
+        <h2 className='text-2xl border w-32 my-2 p-2 bg-green-400 text-white rounded-md font-semibold'>{grandTotal}</h2>
+        <div className='grid col-span-1 gap-1'>
           <div>
-            <InputField name={'bm12'} tittle={'BM 12kg'} qty={bmQty} price={bmPrice} setQty={setBmQty} setPrice={setBmPrice} totalValue={bmTotal} setTotal={setBmTotal} ></InputField>
+            <InputField
+              qtyname={'bm12qty'}
+              name={'bm12price'}
+              tittle={'BM 12kg'}
+              price={bm12price}
+              setQty={handleQty}
+              setPrice={handlePrice}
+              totalValue={bm12qty * bm12price}
+            ></InputField>
           </div>
           <div>
-            <InputField name={'bs12'} tittle={'BS 12kg'} qty={bsQty} price={bsPrice} setQty={setBsQty} setPrice={setBsPrice} totalValue={bsTotal} setTotal={setBsTotal} ></InputField>
+            <InputField
+              qtyname={'bs12qty'}
+              name={'bs12price'}
+              tittle={'BS 12kg'}
+              price={bs12price}
+              setQty={handleQty}
+              setPrice={handlePrice}
+              totalValue={bs12qty * bs12price}
+            ></InputField>
           </div>
           <div>
-            <InputField name={'to12'} tittle={'Total 12kg'} qty={to12Qty} price={to12Price} setQty={setTo12Qty} setPrice={setTo12Price} totalValue={to12Total} setTotal={setTo12Total} ></InputField>
+            <InputField
+              qtyname={'to12qty'}
+              name={'to12price'}
+              tittle={'Total 12kg'}
+              price={to12price}
+              setQty={handleQty}
+              setPrice={handlePrice}
+              totalValue={to12qty * to12price}
+            ></InputField>
           </div>
           <div>
-            <InputField tittle={'Total 15kg'} qty={to15Qty} price={to15Price} setQty={setTo15Qty} setPrice={setTo15Price} totalValue={to15Total} setTotal={setTo15Total} ></InputField>
+            <InputField
+              qtyname={'to15qty'}
+              name={'to15price'}
+              tittle={'Total 15kg'}
+              price={to15price}
+              setQty={handleQty}
+              setPrice={handlePrice}
+              totalValue={to15qty * to15price}
+            ></InputField>
           </div>
           <div>
-            <InputField name={'nz12'} tittle={'Nazir 12kg'} qty={nz12Qty} price={nz12Price} setQty={setNz12Qty} setPrice={setNz12Price} totalValue={nz12Total} setTotal={setNz12Total} ></InputField>
+            <InputField
+              qtyname={'nz12qty'}
+              name={'nz12price'}
+              tittle={'Nazir 12kg'}
+              price={nz12price}
+              setQty={handleQty}
+              setPrice={handlePrice}
+              totalValue={nz12qty * nz12price}
+            ></InputField>
           </div>
           <div>
-            <InputField name={'bs30'} tittle={'BS 30kg'} qty={bs30Qty} price={bs30Price} setQty={setBs30Qty} setPrice={setBs30Price} totalValue={bs30Total} setTotal={setBs30Total} ></InputField>
+            <InputField
+              qtyname={'bs30qty'}
+              name={'bs30price'}
+              tittle={'BS 30kg'}
+              price={bs30price}
+              setQty={handleQty}
+              setPrice={handlePrice}
+              totalValue={bs30qty * bs30price}
+            ></InputField>
           </div>
           <div>
-            <InputField name={'bm20'} tittle={'BM 20kg'} qty={bm20Qty} price={bm20Price} setQty={setBm20Qty} setPrice={setBm20Price} totalValue={bm20Total} setTotal={setBm20Total} ></InputField>
+            <InputField
+              qtyname={'bm20qty'}
+              name={'bm20price'}
+              tittle={'BM 20kg'}
+              price={bm20price}
+              setQty={handleQty}
+              setPrice={handlePrice}
+              totalValue={bm20qty * bm20price}
+            ></InputField>
           </div>
           <div>
-            <InputField name={'to33'} tittle={'Total 33kg'} qty={to33Qty} price={to33Price} setQty={setTo33Qty} setPrice={setTo33Price} totalValue={to33Total} setTotal={setTo33Total} ></InputField>
+            <InputField
+              qtyname={'to33qty'}
+              name={'to33price'}
+              tittle={'Total 33kg'}
+              price={to33price}
+              setQty={handleQty}
+              setPrice={handlePrice}
+              totalValue={to33qty * to33price}
+            ></InputField>
           </div>
         </div>
-        <input type="submit" className="btn btn-primary w-28 mt-8" />
+        <input type="submit" className="btn btn-primary w-28 mt-8" value='Update Price' />
       </form>
       <PackageCalculation setPackageTotal={setPackageTotal}></PackageCalculation>
     </div>
