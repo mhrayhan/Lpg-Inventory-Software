@@ -1,0 +1,316 @@
+[debug] [2022-08-15T07:52:21.699Z] ----------------------------------------------------------------------
+[debug] [2022-08-15T07:52:21.701Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ASUS\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-08-15T07:52:21.701Z] CLI Version:   11.6.0
+[debug] [2022-08-15T07:52:21.701Z] Platform:      win32
+[debug] [2022-08-15T07:52:21.701Z] Node Version:  v16.13.1
+[debug] [2022-08-15T07:52:21.702Z] Time:          Mon Aug 15 2022 13:52:21 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-08-15T07:52:21.702Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-08-15T07:52:21.774Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-08-15T07:52:21.774Z] > authorizing via signed-in user (mhrayhanpc@gmail.com)
+[debug] [2022-08-15T07:52:21.774Z] [iam] checking project sales-calculation-87aa2 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-08-15T07:52:21.776Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions [none]
+[debug] [2022-08-15T07:52:21.777Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions x-goog-quota-user=projects/sales-calculation-87aa2
+[debug] [2022-08-15T07:52:21.777Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-08-15T07:52:24.228Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions 200
+[debug] [2022-08-15T07:52:24.228Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-08-15T07:52:24.230Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 [none]
+[debug] [2022-08-15T07:52:24.970Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 200
+[debug] [2022-08-15T07:52:24.971Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 {"projectId":"sales-calculation-87aa2","projectNumber":"281750948817","displayName":"sales-calculation","name":"projects/sales-calculation-87aa2","resources":{"hostingSite":"sales-calculation-87aa2"},"state":"ACTIVE","etag":"1_305463f7-4f5f-4633-be23-f6e24a5b6939"}
+[info] 
+[info] === Deploying to 'sales-calculation-87aa2'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-08-15T07:52:24.982Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 [none]
+[debug] [2022-08-15T07:52:54.994Z] Timeout reached making request to https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2
+[debug] [2022-08-15T07:52:55.447Z] FirebaseError: Timeout reached making request to https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2
+    at RetryOperation._fn (C:\Users\ASUS\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:238:35)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project sales-calculation-87aa2. Please make sure the project exists and your account has permission to access it.
+[debug] [2022-08-15T07:53:05.437Z] ----------------------------------------------------------------------
+[debug] [2022-08-15T07:53:05.438Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ASUS\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-08-15T07:53:05.439Z] CLI Version:   11.6.0
+[debug] [2022-08-15T07:53:05.439Z] Platform:      win32
+[debug] [2022-08-15T07:53:05.439Z] Node Version:  v16.13.1
+[debug] [2022-08-15T07:53:05.439Z] Time:          Mon Aug 15 2022 13:53:05 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-08-15T07:53:05.440Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-08-15T07:53:05.502Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-08-15T07:53:05.503Z] > authorizing via signed-in user (mhrayhanpc@gmail.com)
+[debug] [2022-08-15T07:53:05.503Z] [iam] checking project sales-calculation-87aa2 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-08-15T07:53:05.505Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions [none]
+[debug] [2022-08-15T07:53:05.505Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions x-goog-quota-user=projects/sales-calculation-87aa2
+[debug] [2022-08-15T07:53:05.505Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-08-15T07:53:08.259Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions 200
+[debug] [2022-08-15T07:53:08.259Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-08-15T07:53:08.260Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 [none]
+[debug] [2022-08-15T07:53:13.709Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 200
+[debug] [2022-08-15T07:53:13.709Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 {"projectId":"sales-calculation-87aa2","projectNumber":"281750948817","displayName":"sales-calculation","name":"projects/sales-calculation-87aa2","resources":{"hostingSite":"sales-calculation-87aa2"},"state":"ACTIVE","etag":"1_305463f7-4f5f-4633-be23-f6e24a5b6939"}
+[info] 
+[info] === Deploying to 'sales-calculation-87aa2'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-08-15T07:53:13.720Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 [none]
+[debug] [2022-08-15T07:53:15.319Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 200
+[debug] [2022-08-15T07:53:15.319Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 {"projectId":"sales-calculation-87aa2","projectNumber":"281750948817","displayName":"sales-calculation","name":"projects/sales-calculation-87aa2","resources":{"hostingSite":"sales-calculation-87aa2"},"state":"ACTIVE","etag":"1_305463f7-4f5f-4633-be23-f6e24a5b6939"}
+[debug] [2022-08-15T07:53:15.322Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/versions [none]
+[debug] [2022-08-15T07:53:15.322Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/versions {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-08-15T07:53:18.241Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/versions 200
+[debug] [2022-08-15T07:53:18.241Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/versions {"name":"projects/281750948817/sites/sales-calculation-87aa2/versions/62c50a18c9469ef8","status":"CREATED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[sales-calculation-87aa2]: beginning deploy... 
+[info] i  hosting[sales-calculation-87aa2]: found 14 files in build 
+[debug] [2022-08-15T07:53:18.255Z] [hosting] uploading with 200 concurrency
+[debug] [2022-08-15T07:53:18.404Z] [hosting] hash cache [YnVpbGQ] stored for 14 files
+[debug] [2022-08-15T07:53:18.404Z] [hosting][hash queue][FINAL] {"max":140,"min":3,"avg":18.428571428571427,"active":0,"complete":14,"success":14,"errored":0,"retried":0,"total":14,"elapsed":146}
+[debug] [2022-08-15T07:53:18.405Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/versions/62c50a18c9469ef8:populateFiles [none]
+[debug] [2022-08-15T07:53:18.405Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/versions/62c50a18c9469ef8:populateFiles {"files":{"/favicon.ico":"eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/index.html":"ab8d703d92949a85394effdf2f0273910168c860c6132df9b76ab72863ee3380","/asset-manifest.json":"8ed7c3888bb0f4c3e516085cd6989933826bfeb367984a260d3513a6b5e46d44","/static/js/787.91d773ea.chunk.js":"c9d1438009733fad1500e6924fff40a273742584b9af9854461b1823a90067b1","/static/css/main.aec556a7.css":"f0c03f11f625e5636f932f7f5e0e4ff3f6650af735f4e2d35132e71bda76031a","/static/css/main.aec556a7.css.map":"38d07d449d811588614ff6c29c3b233804147fdca9d69de3bc011e284f57cd9c","/static/js/787.91d773ea.chunk.js.map":"7d99f85af5786a2c949fbd86a1b24d382ba15e36ae98fd6533c3a944e3e5eb34","/static/js/main.e43a607e.js.LICENSE.txt":"b46eda83f77db1546e846bc778a14c77471c394e3e64d3d2927c7777d7b31a48","/static/js/main.e43a607e.js":"e2f4c29ed3e1d6fa0f45a971e274e2b30668553262b7de2268e8327c3eca6cb6","/static/js/main.e43a607e.js.map":"40e9b4f21f20360ea106dc066576b5dcbcfb03026b349bd962ccd71588a580f7"}}
+[debug] [2022-08-15T07:53:56.412Z] [populateQueue] Retrying task index 0
+[debug] [2022-08-15T07:53:56.413Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/versions/62c50a18c9469ef8:populateFiles [none]
+[debug] [2022-08-15T07:53:56.413Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/versions/62c50a18c9469ef8:populateFiles {"files":{"/favicon.ico":"eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/index.html":"ab8d703d92949a85394effdf2f0273910168c860c6132df9b76ab72863ee3380","/asset-manifest.json":"8ed7c3888bb0f4c3e516085cd6989933826bfeb367984a260d3513a6b5e46d44","/static/js/787.91d773ea.chunk.js":"c9d1438009733fad1500e6924fff40a273742584b9af9854461b1823a90067b1","/static/css/main.aec556a7.css":"f0c03f11f625e5636f932f7f5e0e4ff3f6650af735f4e2d35132e71bda76031a","/static/css/main.aec556a7.css.map":"38d07d449d811588614ff6c29c3b233804147fdca9d69de3bc011e284f57cd9c","/static/js/787.91d773ea.chunk.js.map":"7d99f85af5786a2c949fbd86a1b24d382ba15e36ae98fd6533c3a944e3e5eb34","/static/js/main.e43a607e.js.LICENSE.txt":"b46eda83f77db1546e846bc778a14c77471c394e3e64d3d2927c7777d7b31a48","/static/js/main.e43a607e.js":"e2f4c29ed3e1d6fa0f45a971e274e2b30668553262b7de2268e8327c3eca6cb6","/static/js/main.e43a607e.js.map":"40e9b4f21f20360ea106dc066576b5dcbcfb03026b349bd962ccd71588a580f7"}}
+[debug] [2022-08-15T07:53:58.736Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/versions/62c50a18c9469ef8:populateFiles 200
+[debug] [2022-08-15T07:53:58.737Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/versions/62c50a18c9469ef8:populateFiles {"uploadRequiredHashes":["ab8d703d92949a85394effdf2f0273910168c860c6132df9b76ab72863ee3380"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/sales-calculation-87aa2/versions/62c50a18c9469ef8/files"}
+[debug] [2022-08-15T07:53:58.738Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/sales-calculation-87aa2/versions/62c50a18c9469ef8/files/ab8d703d92949a85394effdf2f0273910168c860c6132df9b76ab72863ee3380 [none]
+[debug] [2022-08-15T07:53:58.738Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/sales-calculation-87aa2/versions/62c50a18c9469ef8/files/ab8d703d92949a85394effdf2f0273910168c860c6132df9b76ab72863ee3380 [stream]
+[debug] [2022-08-15T07:53:58.740Z] [hosting][populate queue][FINAL] {"max":2325,"min":2325,"avg":2325,"active":0,"complete":1,"success":1,"errored":0,"retried":1,"total":1,"elapsed":40338}
+[debug] [2022-08-15T07:53:58.740Z] [hosting] uploads queued: 1
+[debug] [2022-08-15T07:54:02.301Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/sales-calculation-87aa2/versions/62c50a18c9469ef8/files/ab8d703d92949a85394effdf2f0273910168c860c6132df9b76ab72863ee3380 200
+[debug] [2022-08-15T07:54:02.301Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/sales-calculation-87aa2/versions/62c50a18c9469ef8/files/ab8d703d92949a85394effdf2f0273910168c860c6132df9b76ab72863ee3380 [stream]
+[debug] [2022-08-15T07:54:02.302Z] [hosting][upload queue][FINAL] {"max":3565,"min":3565,"avg":3565,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":3565}
+[info] +  hosting[sales-calculation-87aa2]: file upload complete 
+[debug] [2022-08-15T07:54:02.303Z] [hosting] deploy completed after 44060ms
+[debug] [2022-08-15T07:54:02.306Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "sales-calculation-87aa2"
+    },
+    "site": "sales-calculation-87aa2",
+    "version": "projects/281750948817/sites/sales-calculation-87aa2/versions/62c50a18c9469ef8"
+  }
+]
+[info] i  hosting[sales-calculation-87aa2]: finalizing version... 
+[debug] [2022-08-15T07:54:02.307Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/versions/62c50a18c9469ef8 updateMask=status%2Cconfig
+[debug] [2022-08-15T07:54:02.307Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/versions/62c50a18c9469ef8 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2022-08-15T07:54:43.725Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\ASUS\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-08-15T07:58:34.759Z] ----------------------------------------------------------------------
+[debug] [2022-08-15T07:58:34.761Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ASUS\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-08-15T07:58:34.761Z] CLI Version:   11.6.0
+[debug] [2022-08-15T07:58:34.761Z] Platform:      win32
+[debug] [2022-08-15T07:58:34.761Z] Node Version:  v16.13.1
+[debug] [2022-08-15T07:58:34.762Z] Time:          Mon Aug 15 2022 13:58:34 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-08-15T07:58:34.762Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-08-15T07:58:34.821Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-08-15T07:58:34.821Z] > authorizing via signed-in user (mhrayhanpc@gmail.com)
+[debug] [2022-08-15T07:58:34.821Z] [iam] checking project sales-calculation-87aa2 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-08-15T07:58:34.824Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions [none]
+[debug] [2022-08-15T07:58:34.824Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions x-goog-quota-user=projects/sales-calculation-87aa2
+[debug] [2022-08-15T07:58:34.824Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-08-15T07:58:39.202Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions 200
+[debug] [2022-08-15T07:58:39.202Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-08-15T07:58:39.203Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 [none]
+[debug] [2022-08-15T07:58:40.146Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 200
+[debug] [2022-08-15T07:58:40.146Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 {"projectId":"sales-calculation-87aa2","projectNumber":"281750948817","displayName":"sales-calculation","name":"projects/sales-calculation-87aa2","resources":{"hostingSite":"sales-calculation-87aa2"},"state":"ACTIVE","etag":"1_305463f7-4f5f-4633-be23-f6e24a5b6939"}
+[info] 
+[info] === Deploying to 'sales-calculation-87aa2'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-08-15T07:58:40.149Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 [none]
+[debug] [2022-08-15T07:59:10.152Z] Timeout reached making request to https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2
+[debug] [2022-08-15T07:59:10.537Z] FirebaseError: Timeout reached making request to https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2
+    at RetryOperation._fn (C:\Users\ASUS\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:238:35)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project sales-calculation-87aa2. Please make sure the project exists and your account has permission to access it.
+[debug] [2022-08-15T07:59:19.286Z] ----------------------------------------------------------------------
+[debug] [2022-08-15T07:59:19.288Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ASUS\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-08-15T07:59:19.288Z] CLI Version:   11.6.0
+[debug] [2022-08-15T07:59:19.288Z] Platform:      win32
+[debug] [2022-08-15T07:59:19.289Z] Node Version:  v16.13.1
+[debug] [2022-08-15T07:59:19.289Z] Time:          Mon Aug 15 2022 13:59:19 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-08-15T07:59:19.289Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-08-15T07:59:19.350Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-08-15T07:59:19.350Z] > authorizing via signed-in user (mhrayhanpc@gmail.com)
+[debug] [2022-08-15T07:59:19.350Z] [iam] checking project sales-calculation-87aa2 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-08-15T07:59:19.353Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions [none]
+[debug] [2022-08-15T07:59:19.353Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions x-goog-quota-user=projects/sales-calculation-87aa2
+[debug] [2022-08-15T07:59:19.353Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-08-15T07:59:25.447Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions 200
+[debug] [2022-08-15T07:59:25.447Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-08-15T07:59:25.448Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 [none]
+[debug] [2022-08-15T07:59:27.355Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 200
+[debug] [2022-08-15T07:59:27.355Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 {"projectId":"sales-calculation-87aa2","projectNumber":"281750948817","displayName":"sales-calculation","name":"projects/sales-calculation-87aa2","resources":{"hostingSite":"sales-calculation-87aa2"},"state":"ACTIVE","etag":"1_305463f7-4f5f-4633-be23-f6e24a5b6939"}
+[info] 
+[info] === Deploying to 'sales-calculation-87aa2'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-08-15T07:59:27.358Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 [none]
+[debug] [2022-08-15T07:59:29.364Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 200
+[debug] [2022-08-15T07:59:29.364Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 {"projectId":"sales-calculation-87aa2","projectNumber":"281750948817","displayName":"sales-calculation","name":"projects/sales-calculation-87aa2","resources":{"hostingSite":"sales-calculation-87aa2"},"state":"ACTIVE","etag":"1_305463f7-4f5f-4633-be23-f6e24a5b6939"}
+[debug] [2022-08-15T07:59:29.366Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/versions [none]
+[debug] [2022-08-15T07:59:29.366Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/versions {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-08-15T07:59:31.257Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/versions 200
+[debug] [2022-08-15T07:59:31.257Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/versions {"name":"projects/281750948817/sites/sales-calculation-87aa2/versions/c1606d2e75d4455d","status":"CREATED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[sales-calculation-87aa2]: beginning deploy... 
+[info] i  hosting[sales-calculation-87aa2]: found 14 files in build 
+[debug] [2022-08-15T07:59:31.268Z] [hosting] uploading with 200 concurrency
+[debug] [2022-08-15T07:59:31.274Z] [hosting] hash cache [YnVpbGQ] stored for 14 files
+[debug] [2022-08-15T07:59:31.274Z] [hosting][hash queue][FINAL] {"max":1,"min":0,"avg":0,"active":0,"complete":14,"success":14,"errored":0,"retried":0,"total":14,"elapsed":3}
+[debug] [2022-08-15T07:59:31.275Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/versions/c1606d2e75d4455d:populateFiles [none]
+[debug] [2022-08-15T07:59:31.275Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/versions/c1606d2e75d4455d:populateFiles {"files":{"/asset-manifest.json":"8ed7c3888bb0f4c3e516085cd6989933826bfeb367984a260d3513a6b5e46d44","/favicon.ico":"eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9","/index.html":"ab8d703d92949a85394effdf2f0273910168c860c6132df9b76ab72863ee3380","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/static/css/main.aec556a7.css":"f0c03f11f625e5636f932f7f5e0e4ff3f6650af735f4e2d35132e71bda76031a","/static/css/main.aec556a7.css.map":"38d07d449d811588614ff6c29c3b233804147fdca9d69de3bc011e284f57cd9c","/static/js/787.91d773ea.chunk.js":"c9d1438009733fad1500e6924fff40a273742584b9af9854461b1823a90067b1","/static/js/787.91d773ea.chunk.js.map":"7d99f85af5786a2c949fbd86a1b24d382ba15e36ae98fd6533c3a944e3e5eb34","/static/js/main.e43a607e.js":"e2f4c29ed3e1d6fa0f45a971e274e2b30668553262b7de2268e8327c3eca6cb6","/static/js/main.e43a607e.js.LICENSE.txt":"b46eda83f77db1546e846bc778a14c77471c394e3e64d3d2927c7777d7b31a48","/static/js/main.e43a607e.js.map":"40e9b4f21f20360ea106dc066576b5dcbcfb03026b349bd962ccd71588a580f7"}}
+[debug] [2022-08-15T08:11:16.350Z] ----------------------------------------------------------------------
+[debug] [2022-08-15T08:11:16.352Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ASUS\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-08-15T08:11:16.352Z] CLI Version:   11.6.0
+[debug] [2022-08-15T08:11:16.353Z] Platform:      win32
+[debug] [2022-08-15T08:11:16.353Z] Node Version:  v16.13.1
+[debug] [2022-08-15T08:11:16.353Z] Time:          Mon Aug 15 2022 14:11:16 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-08-15T08:11:16.353Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-08-15T08:11:16.414Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-08-15T08:11:16.414Z] > authorizing via signed-in user (mhrayhanpc@gmail.com)
+[debug] [2022-08-15T08:11:16.414Z] [iam] checking project sales-calculation-87aa2 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-08-15T08:11:16.416Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions [none]
+[debug] [2022-08-15T08:11:16.417Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions x-goog-quota-user=projects/sales-calculation-87aa2
+[debug] [2022-08-15T08:11:16.417Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-08-15T08:11:18.204Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions 200
+[debug] [2022-08-15T08:11:18.204Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-08-15T08:11:18.205Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 [none]
+[debug] [2022-08-15T08:11:18.888Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 200
+[debug] [2022-08-15T08:11:18.889Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 {"projectId":"sales-calculation-87aa2","projectNumber":"281750948817","displayName":"sales-calculation","name":"projects/sales-calculation-87aa2","resources":{"hostingSite":"sales-calculation-87aa2"},"state":"ACTIVE","etag":"1_305463f7-4f5f-4633-be23-f6e24a5b6939"}
+[info] 
+[info] === Deploying to 'sales-calculation-87aa2'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-08-15T08:11:18.892Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 [none]
+[debug] [2022-08-15T08:11:25.988Z] ----------------------------------------------------------------------
+[debug] [2022-08-15T08:11:25.990Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ASUS\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-08-15T08:11:25.991Z] CLI Version:   11.6.0
+[debug] [2022-08-15T08:11:25.991Z] Platform:      win32
+[debug] [2022-08-15T08:11:25.991Z] Node Version:  v16.13.1
+[debug] [2022-08-15T08:11:25.991Z] Time:          Mon Aug 15 2022 14:11:25 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-08-15T08:11:25.991Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-08-15T08:11:26.056Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-08-15T08:11:26.057Z] > authorizing via signed-in user (mhrayhanpc@gmail.com)
+[debug] [2022-08-15T08:11:26.057Z] [iam] checking project sales-calculation-87aa2 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-08-15T08:11:26.059Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions [none]
+[debug] [2022-08-15T08:11:26.059Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions x-goog-quota-user=projects/sales-calculation-87aa2
+[debug] [2022-08-15T08:11:26.059Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-08-15T08:11:28.664Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions 200
+[debug] [2022-08-15T08:11:28.664Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-08-15T08:11:28.665Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 [none]
+[debug] [2022-08-15T08:11:29.519Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 200
+[debug] [2022-08-15T08:11:29.519Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 {"projectId":"sales-calculation-87aa2","projectNumber":"281750948817","displayName":"sales-calculation","name":"projects/sales-calculation-87aa2","resources":{"hostingSite":"sales-calculation-87aa2"},"state":"ACTIVE","etag":"1_305463f7-4f5f-4633-be23-f6e24a5b6939"}
+[info] 
+[info] === Deploying to 'sales-calculation-87aa2'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-08-15T08:11:29.523Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 [none]
+[debug] [2022-08-15T08:11:56.261Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2
+[debug] [2022-08-15T08:11:57.230Z] FirebaseError: Failed to make request to https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2
+    at RetryOperation._fn (C:\Users\ASUS\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:242:31)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project sales-calculation-87aa2. Please make sure the project exists and your account has permission to access it.
+[debug] [2022-08-15T08:12:10.018Z] ----------------------------------------------------------------------
+[debug] [2022-08-15T08:12:10.020Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ASUS\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-08-15T08:12:10.020Z] CLI Version:   11.6.0
+[debug] [2022-08-15T08:12:10.020Z] Platform:      win32
+[debug] [2022-08-15T08:12:10.020Z] Node Version:  v16.13.1
+[debug] [2022-08-15T08:12:10.021Z] Time:          Mon Aug 15 2022 14:12:10 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-08-15T08:12:10.021Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-08-15T08:12:10.081Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-08-15T08:12:10.082Z] > authorizing via signed-in user (mhrayhanpc@gmail.com)
+[debug] [2022-08-15T08:12:10.082Z] [iam] checking project sales-calculation-87aa2 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-08-15T08:12:10.084Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions [none]
+[debug] [2022-08-15T08:12:10.084Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions x-goog-quota-user=projects/sales-calculation-87aa2
+[debug] [2022-08-15T08:12:10.084Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-08-15T08:12:10.776Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions 200
+[debug] [2022-08-15T08:12:10.777Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sales-calculation-87aa2:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-08-15T08:12:10.778Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 [none]
+[debug] [2022-08-15T08:12:11.903Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 200
+[debug] [2022-08-15T08:12:11.903Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 {"projectId":"sales-calculation-87aa2","projectNumber":"281750948817","displayName":"sales-calculation","name":"projects/sales-calculation-87aa2","resources":{"hostingSite":"sales-calculation-87aa2"},"state":"ACTIVE","etag":"1_305463f7-4f5f-4633-be23-f6e24a5b6939"}
+[info] 
+[info] === Deploying to 'sales-calculation-87aa2'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-08-15T08:12:11.906Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 [none]
+[debug] [2022-08-15T08:12:12.626Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 200
+[debug] [2022-08-15T08:12:12.626Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sales-calculation-87aa2 {"projectId":"sales-calculation-87aa2","projectNumber":"281750948817","displayName":"sales-calculation","name":"projects/sales-calculation-87aa2","resources":{"hostingSite":"sales-calculation-87aa2"},"state":"ACTIVE","etag":"1_305463f7-4f5f-4633-be23-f6e24a5b6939"}
+[debug] [2022-08-15T08:12:12.628Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/versions [none]
+[debug] [2022-08-15T08:12:12.628Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/versions {"config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-08-15T08:12:14.909Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/versions 200
+[debug] [2022-08-15T08:12:14.909Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/versions {"name":"projects/281750948817/sites/sales-calculation-87aa2/versions/98fe28649013e94e","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[sales-calculation-87aa2]: beginning deploy... 
+[info] i  hosting[sales-calculation-87aa2]: found 14 files in build 
+[debug] [2022-08-15T08:12:14.923Z] [hosting] uploading with 200 concurrency
+[debug] [2022-08-15T08:12:14.930Z] [hosting] hash cache [YnVpbGQ] stored for 14 files
+[debug] [2022-08-15T08:12:14.931Z] [hosting][hash queue][FINAL] {"max":2,"min":1,"avg":1,"active":0,"complete":14,"success":14,"errored":0,"retried":0,"total":14,"elapsed":5}
+[debug] [2022-08-15T08:12:14.931Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/versions/98fe28649013e94e:populateFiles [none]
+[debug] [2022-08-15T08:12:14.931Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/versions/98fe28649013e94e:populateFiles {"files":{"/asset-manifest.json":"8ed7c3888bb0f4c3e516085cd6989933826bfeb367984a260d3513a6b5e46d44","/favicon.ico":"eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9","/index.html":"ab8d703d92949a85394effdf2f0273910168c860c6132df9b76ab72863ee3380","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/static/css/main.aec556a7.css":"f0c03f11f625e5636f932f7f5e0e4ff3f6650af735f4e2d35132e71bda76031a","/static/css/main.aec556a7.css.map":"38d07d449d811588614ff6c29c3b233804147fdca9d69de3bc011e284f57cd9c","/static/js/787.91d773ea.chunk.js":"c9d1438009733fad1500e6924fff40a273742584b9af9854461b1823a90067b1","/static/js/787.91d773ea.chunk.js.map":"7d99f85af5786a2c949fbd86a1b24d382ba15e36ae98fd6533c3a944e3e5eb34","/static/js/main.e43a607e.js":"e2f4c29ed3e1d6fa0f45a971e274e2b30668553262b7de2268e8327c3eca6cb6","/static/js/main.e43a607e.js.LICENSE.txt":"b46eda83f77db1546e846bc778a14c77471c394e3e64d3d2927c7777d7b31a48","/static/js/main.e43a607e.js.map":"40e9b4f21f20360ea106dc066576b5dcbcfb03026b349bd962ccd71588a580f7"}}
+[debug] [2022-08-15T08:12:16.925Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/versions/98fe28649013e94e:populateFiles 200
+[debug] [2022-08-15T08:12:16.925Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/versions/98fe28649013e94e:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/sales-calculation-87aa2/versions/98fe28649013e94e/files"}
+[debug] [2022-08-15T08:12:16.926Z] [hosting][populate queue][FINAL] {"max":1997,"min":1997,"avg":1997,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1997}
+[debug] [2022-08-15T08:12:16.926Z] [hosting] uploads queued: 0
+[debug] [2022-08-15T08:12:16.926Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1660551136926}
+[info] +  hosting[sales-calculation-87aa2]: file upload complete 
+[debug] [2022-08-15T08:12:16.927Z] [hosting] deploy completed after 2016ms
+[debug] [2022-08-15T08:12:16.930Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "sales-calculation-87aa2"
+    },
+    "site": "sales-calculation-87aa2",
+    "version": "projects/281750948817/sites/sales-calculation-87aa2/versions/98fe28649013e94e"
+  }
+]
+[info] i  hosting[sales-calculation-87aa2]: finalizing version... 
+[debug] [2022-08-15T08:12:16.932Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/versions/98fe28649013e94e updateMask=status%2Cconfig
+[debug] [2022-08-15T08:12:16.932Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/versions/98fe28649013e94e {"status":"FINALIZED","config":{}}
+[debug] [2022-08-15T08:12:18.952Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/versions/98fe28649013e94e 200
+[debug] [2022-08-15T08:12:18.952Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/versions/98fe28649013e94e {"name":"projects/281750948817/sites/sales-calculation-87aa2/versions/98fe28649013e94e","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-08-15T08:12:13.840539Z","createUser":{"email":"mhrayhanpc@gmail.com"},"finalizeTime":"2022-08-15T08:12:18.057214Z","finalizeUser":{"email":"mhrayhanpc@gmail.com"}}
+[debug] [2022-08-15T08:12:18.952Z] [hosting] finalized version for sales-calculation-87aa2:[object Object]
+[info] +  hosting[sales-calculation-87aa2]: version finalized 
+[info] i  hosting[sales-calculation-87aa2]: releasing new version... 
+[debug] [2022-08-15T08:12:18.953Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/releases versionName=projects%2F281750948817%2Fsites%2Fsales-calculation-87aa2%2Fversions%2F98fe28649013e94e
+[debug] [2022-08-15T08:12:18.953Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/releases {"message":null}
+[debug] [2022-08-15T08:12:21.067Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/releases 200
+[debug] [2022-08-15T08:12:21.068Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/281750948817/sites/sales-calculation-87aa2/releases {"name":"projects/281750948817/sites/sales-calculation-87aa2/releases/1660551139641998","version":{"name":"projects/281750948817/sites/sales-calculation-87aa2/versions/98fe28649013e94e","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-08-15T08:12:13.840539Z","createUser":{"email":"mhrayhanpc@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AFdZucobWWo8RWWJWMRYXNzcg22dxxRRDy6SxG0z-Sbu"},"finalizeTime":"2022-08-15T08:12:18.057214Z","finalizeUser":{"email":"mhrayhanpc@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AFdZucobWWo8RWWJWMRYXNzcg22dxxRRDy6SxG0z-Sbu"}},"type":"DEPLOY","releaseTime":"2022-08-15T08:12:19.641998976Z","releaseUser":{"email":"mhrayhanpc@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AFdZucobWWo8RWWJWMRYXNzcg22dxxRRDy6SxG0z-Sbu"}}
+[debug] [2022-08-15T08:12:21.068Z] [hosting] release: {"name":"projects/281750948817/sites/sales-calculation-87aa2/releases/1660551139641998","version":{"name":"projects/281750948817/sites/sales-calculation-87aa2/versions/98fe28649013e94e","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-08-15T08:12:13.840539Z","createUser":{"email":"mhrayhanpc@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AFdZucobWWo8RWWJWMRYXNzcg22dxxRRDy6SxG0z-Sbu"},"finalizeTime":"2022-08-15T08:12:18.057214Z","finalizeUser":{"email":"mhrayhanpc@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AFdZucobWWo8RWWJWMRYXNzcg22dxxRRDy6SxG0z-Sbu"}},"type":"DEPLOY","releaseTime":"2022-08-15T08:12:19.641998976Z","releaseUser":{"email":"mhrayhanpc@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AFdZucobWWo8RWWJWMRYXNzcg22dxxRRDy6SxG0z-Sbu"}}
+[info] +  hosting[sales-calculation-87aa2]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/sales-calculation-87aa2/overview
+[info] Hosting URL: https://sales-calculation-87aa2.web.app
+[debug] [2022-08-15T08:12:46.221Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\ASUS\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+[error] 
+[error] Error: An unexpected error has occurred.
