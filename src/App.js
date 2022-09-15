@@ -1,12 +1,10 @@
 import SalesCalculation from "./components/Calculation/SalesCalculation";
-import Test from "./components/Testing/Test";
 
 
 function App() {
   return (
-    <div className="bg-slate-100 ">
+    <div className="pb-8">
       <SalesCalculation></SalesCalculation>
-      {/* <Test></Test> */}
     </div>
   );
 }
