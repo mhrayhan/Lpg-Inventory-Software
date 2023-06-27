@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { Bars } from 'react-loader-spinner';
 import Swal from 'sweetalert2';
-import InputField from './InputField';
 import resetbtn from '../../asset/reset.png'
 import '../Calculation/SalesCalculation.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom';
+import InputField from '../Calculation/InputField';
 AOS.init({ duration: 1200 });
 
-const SalesCalculation = () => {
+
+
+const SalesOne = () => {
   const [header, setHeader] = useState(false)
   const [loading, setLoading] = useState(true)
   //refill price from database
@@ -18,7 +20,7 @@ const SalesCalculation = () => {
   const { bm12price, bm20price, bs12price, bs30price, to12price, to15price, to33price, nz12price, bm12priceP, bs12priceP, to12priceP, } = refillPrice;
   useEffect(() => {
     // this api key from todo app server
-    const url = 'https://task-manager-server-rose.vercel.app/price/refillPrice'
+    const url = 'https://flannel-parliament-48417.herokuapp.com/price/refillPrice'
     fetch(url)
       .then(res => res.json())
       .then(data => {
@@ -75,7 +77,7 @@ const SalesCalculation = () => {
 
   const handleRefillPriceSubmit = (e) => {
     e.preventDefault();
-    const url = 'https://task-manager-server-rose.vercel.app/price/refillPrice';
+    const url = 'https://flannel-parliament-48417.herokuapp.com/price/refillPrice';
     fetch(url, {
       method: 'PUT',
       headers: {
@@ -130,17 +132,18 @@ const SalesCalculation = () => {
   const headingBgColor = 'bg-black'
   return (
     <section className='lg:w-2/5 lg:mx-auto  lg:shadow-2xl shadow-xl'>
+      <p className='bg-yellow-300 text-center'>BoroGari</p>
       <div className={header ? 'bg-green-200 transition duration-1000 px-1 lg:px-4 shadow-md flex items-center justify-between lg:pt-0 sticky top-0 z-50  py-[2px]' : 'flex items-center justify-between lg:pt-2 sticky top-0 z-50 px-1 lg:px-4 py-[2px] bg-slate-200 transition duration-1000'}>
         <div className='flex'>
-          <div data-aos="fade-right" className='w-36 flex items-center text-xl text-semibold text-white mr-2' >
+          <span data-aos="fade-right" className='w-36 flex items-center text-xl text-semibold text-white mr-2' >
             <p style={{ borderRadius: '7px 0 0 7px' }} className={`${header ? headingBgColor : headingBgColor} ${header ? 'text-amber-200' : 'text-white'} transition duration-1000 p-2 w-20`}>Qty </p>
             <p style={{ borderRadius: '0 7px 7px 0' }} className='bg-white text-black p-2 w-full text-right flex justify-between'>
               <span>{totalQty}</span>
               -
               <span>{packQty}</span>
             </p>
-          </div>
-          <div data-aos="fade-left" className='w-36 flex items-center text-xl text-semibold text-white' >
+          </span>
+          <span data-aos="fade-left" className='w-36 flex items-center text-xl text-semibold text-white' >
             <p style={{ borderRadius: '7px 0 0 7px' }} className={`${header ? headingBgColor : headingBgColor} ${header ? 'text-yellow-300' : 'text-white'} transition duration-1000 p-2 w-20`}>Tk </p>
 
             {loading ? <div style={{ borderRadius: '0 7px 7px 0' }} className='bg-white text-black p-2 w-full text-center'>
@@ -154,7 +157,7 @@ const SalesCalculation = () => {
                 visible={true}
               />
             </div> : <p style={{ borderRadius: '0 7px 7px 0' }} className='bg-white text-black p-2 w-full text-right'> {grandTotal}</p>}
-          </div>
+          </span>
         </div>
         <div data-aos="fade-down" data-aos-duration="2000">
           <button className='btn border-none hover:bg-transparent opacity-90 hover:opacity-100uy transition duration-1000 bg-transparent m-0 p-0' width={0} onClick={clearQty} ><img src={resetbtn} width={30} alt="" /></button>
@@ -309,11 +312,11 @@ const SalesCalculation = () => {
             </div>
           </div>
           <input type="submit" style={{ background: 'linear-gradient(90deg, #4568dc 20%, #b06ab3 80%)', border: 'none' }} className="btn btn-xs  text-white w-fit mt-2 hover:opacity-100 transition duration-500 shadow-md hover:shadow shadow-white hover:shadow-gray-400" value='Update' />
-          <Link to='dash'><button style={{ background: 'linear-gradient(90deg, red 20%, blue 80%)', border: 'none' }} className="btn btn-xs  text-white w-fit mt-2 hover:opacity-100 transition duration-500 shadow-md hover:shadow shadow-white hover:shadow-gray-400">Menu</button></Link>
+          <Link to='/'><button style={{ background: 'linear-gradient(90deg, red 20%, blue 80%)', border: 'none' }} className="btn btn-xs  text-white w-fit mt-2 hover:opacity-100 transition duration-500 shadow-md hover:shadow shadow-white hover:shadow-gray-400">Home</button></Link>
         </form>
       </section >
     </section>
   );
 };
 
-export default SalesCalculation;
+export default SalesOne;

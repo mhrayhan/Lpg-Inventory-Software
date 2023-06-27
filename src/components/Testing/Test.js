@@ -13,12 +13,10 @@ const Test = () => {
   const [data, setData] = useState({})
   const handleChange = (e) => {
     const { name, value } = e.target;
-    // console.log(name, value);
     setData((prev) => {
       return { ...prev, [name]: parseInt(value) }
     })
   }
-  console.log(data);
   return (
     <div className='flex'>
       <div className='w-48 grid grid-cols-1 gap-2 '>
